@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: white;
-  --background-rgb: rgb(33, 33, 33);
+  --foreground-rgb: rgb(0, 0, 0);
+  --background-rgb: rgb(255, 255, 255);
 
 }
 
@@ -13,8 +13,10 @@
 body {
   color: var(--foreground-rgb);
   background:var(--background-rgb);
+  overflow-y: hidden;
 
 }
+
 
 
 

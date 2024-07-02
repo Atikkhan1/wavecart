@@ -5,13 +5,18 @@ import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-    <Navbar></Navbar>
-
-      
-    <Sidebar></Sidebar><Component {...pageProps} />
+    <div className="" style={{height:'100vh'}}>
+    <Navbar ></Navbar>
     
-    <Footer></Footer>
-    </>
+    <div className="flex w-full" style={{height:'88vh'}}>
+      <Sidebar ></Sidebar>
+      
+      <div className=" w-5/6 max-md:w-full overflow-scroll" >
+      <Component {...pageProps} />
+      
+      <Footer></Footer>
+      </div>
+    </div>
+    </div>
   );
 }

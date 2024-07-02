@@ -15,27 +15,35 @@ const Navbar = () => {
 
 
   return (
-  <div>
-    <div className='w-full flex bg-slate-900 max-md:h-16 shadow-md items-center '>
-      <Link href={'/'} className='w-full flex bg-slate-900 max-md:h-16 shadow-md '>
-        <img src="/logo.png" alt=""  className='size-12 flex my-auto ml-2' />
-        <p  alt=""  className='text-3xl flex my-auto font-sans' > avecart</p>
+  <div style={{height:'12vh'}}>
+
+
+    <div className='w-full flex bg-white shadow-md  
+    items-center'>
+
+    <button className='text-black'>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 19 19" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-10 ml-3 cursor-pointer md:hidden"><line x1="14" y1="10" x2="3" y2="10"></line><line x1="14" y1="6" x2="3" y2="6"></line><line x1="14" y1="14" x2="3" y2="14"></line></svg>
+    </button>
+    
+      <Link href={'/'} className=' flex max-md:h-16 text-black'>
+        <img src="/logo.png" alt=""  className='size-12 flex my-auto ml-1' />
+        <p  alt=""  className='text-3xl flex my-auto font-sans -mx-1' > avecart</p>
       </Link>
 
-      <Link className='stroke-white size-8 mx-4' href={'/user/cart'}>
-        <svg  viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></  circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+
+      <Link className='stroke-white size-6 mx-4 ml-auto text-black' href={'/user/cart'}>
+        <svg  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></  circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
       </Link>
-      <Link className='stroke-white size-8 mx-4' href={'/user/signup'}>
+      <Link className='stroke-white size-6 mx-4 text-black' href={'/user/signup'}>
         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
       </Link>
     </div>
 
-
-
-    <div className='flex  w-full h-10  max-md:overflow-x-auto bg-slate-800 gap-3 p-1'>
-{optionsData.map((d)=>{
-    return (
-    <Link key={d.name} href={d.link} className='flex h-full w-auto px-2 pt-0.5 text-xs rounded-lg md:text-xl   font-extrabold font-mono justify-center items-center'>{d.name}</Link>
+    <div className='flex  w-full h-10  max-md:overflow-x-auto bg-gray-100 gap-3 p-1'>
+      {optionsData.map((d)=>{
+      return (
+      <Link key={d.name} href={d.link} className='flex h-full w-auto px-2 pt-0.5 text-xs rounded-lg md:text-xl   font-extrabold font-mono justify-center text-black items-center'>{d.name}</Link>
   )})}
 
     </div>
