@@ -22,7 +22,7 @@ function Home() {
           <div className="flex flex-wrap  max-md:gap-x m-4">
           
             {Data.map((pro)=>{
-              return  (<ProductDesign key={pro.name} id={pro._id} name={pro.name.slice(0,30)+'...'} 
+              return  (<ProductDesign key={pro._id} id={pro._id} name={pro.name.slice(0,30)+'...'} 
               image={pro.image} 
               price={pro.price}
               category={pro.category}
