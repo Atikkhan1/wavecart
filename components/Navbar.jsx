@@ -15,6 +15,7 @@ const Navbar = () => {
     {name:"Shirts",link:"/category/shirts"},
     {name:"Jeans",link:"/category/jeans"},
     {name:"Shorts",link:"/category/shorts"},
+    {name:"earbuds",link:"/category/earbuds"},
   ]
 
 
