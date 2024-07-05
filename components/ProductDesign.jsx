@@ -18,7 +18,7 @@ const ProductDesign = (param) => {
             <h2 className=" title-font text-lg font-medium">
               {param.name}
             </h2>
-            <p className="flex mt-1 text-green-600">₹{Math.floor(param.price * 1.5)}/- <b className='ml-2 text-gray-400 line-through'>₹{Math.floor(param.price * 1.7)}</b></p>
+            <p className="flex mt-1 text-green-600">₹{Math.floor(param.price * 1.4)}/- <b className='ml-2 text-gray-400 line-through'>₹{Math.floor(param.price * 2)}</b></p>
           </div>
         </div>
   )
