@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
 
 
   return (
-    <div className="" style={{height:'100vh'}}>
+    < >
     <Navbar ></Navbar>
     
     <div className="flex w-full" style={{height:'100vh'}}>
@@ -20,6 +20,6 @@ export default function App({ Component, pageProps }) {
       <Footer></Footer>
       </div>
     </div>
-    </div>
+    </>
   );
 }
