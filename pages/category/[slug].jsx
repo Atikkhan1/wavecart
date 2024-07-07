@@ -1,16 +1,22 @@
+import { useRouter } from 'next/router'
+import React, { useEffect, useState } from 'react'
 import ProductDesign from "@/components/ProductDesign";
-import React, { useEffect, useState } from "react";
 
-const shoes = () => {
-    const [Data, setData] = useState([])
+
+
+const slug = () => {
+  let router = useRouter()
+  let {slug}= router.query
+  const [Data, setData] = useState([])
     useEffect(()=>{
-      fetch('/api/getProducts?key=category&&value=shoes').then((res)=>{
+      console.log(slug)
+      fetch(`/api/getProducts?key=category&&value=${slug}`).then((res)=>{
         return res.json();
       }).then((fetchData)=>{
         setData(fetchData)
+        console.log(fetchData)
       })
     },[])
-    
   
     return (
       <div>
@@ -20,7 +26,8 @@ const shoes = () => {
   
               
             {Data.map((pro)=>{
-                return  (<ProductDesign key={pro.name} id={pro._id} name={pro.name.slice(0,30)+'...'} 
+                return  (
+                <ProductDesign key={pro._id} id={pro._id} name={pro.name.slice(0,30)+'...'} 
                 image={pro.image} 
                 price={pro.price}
                 category={pro.category}
@@ -32,7 +39,7 @@ const shoes = () => {
           </div>
         </section>
       </div>
-  )
-}
+    );
+  }
 
-export default shoes
+export default slug

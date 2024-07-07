@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProductDesign from "@/components/ProductDesign";
 
-
 function Home() {
   
   const [Data, setData] = useState([])
@@ -13,6 +12,7 @@ function Home() {
     })
   },[])
   
+ 
   return (
     <div className="">
       <img className="w-full" src="/Banner.jpg" alt="" />

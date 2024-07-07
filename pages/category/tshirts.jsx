@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const tshirts = () => {
   const [Data, setData] = useState([])
   useEffect(()=>{
-    fetch('/api/getProducts?key=category&&value=tshirt').then((res)=>{
+    fetch('/api/getProducts?key=category&&value=tshirts').then((res)=>{
       return res.json();
     }).then((fetchData)=>{
       setData(fetchData)

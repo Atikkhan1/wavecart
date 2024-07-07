@@ -1,6 +1,6 @@
 import Product from "@/models/productSchema";
 import mongoose from "mongoose";
-
+const fs = require('fs')
 export default async function handler(req, res) {
   let key = req.query.key
   let value = req.query.value

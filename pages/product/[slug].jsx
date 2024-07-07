@@ -6,7 +6,6 @@ import React, { useEffect, useState } from "react";
 const slug = () => {
     let router = useRouter()
     let {slug} = router.query
-
     let [Data, setData] = useState([])
     useEffect(()=>{
       fetch(`/api/getProducts?key=_id&&value=${slug}`).then((res)=>{
@@ -25,24 +24,10 @@ const slug = () => {
               
         <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
           <h2 className="text-sm title-font text-gray-500 tracking-widest">BRAND NAME</h2>
-          <h1 className="text-white text-3xl title-font font-medium mb-1">{Data.name}</h1>
-          <div className="relative">
-                <select className="rounded border bg-black text-white border-gray-300 my-2 py-1 justify-center items-center text-sm 
-                focus:outline-none focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 pl-3 pr-10">
-                  <option>SM</option>
-                  <option>M</option>
-                  <option>L</option>
-                  <option>XL</option>
-                  <option>XXL</option>
-                </select>
-                <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
-                  <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4" viewBox="0 0 24 24">
-                    <path d="M6 9l6 6 6-6"></path>
-                  </svg>
-                </span>
-              </div>
+          <h1 className="text-black text-3xl title-font font-medium mb-1">{Data.name}</h1>
+         
           <div className="flex">
-            <p className="title-font font-medium text-2xl text-white">₹{Math.floor(Data.price * 1.5)}/- <b className='ml-2 text-gray-400 line-through'>₹{Math.floor(Data.price * 1.7)}</b></p>
+            <p className="title-font font-medium text-2xl text-green-400">₹{Math.floor(Data.price * 1.5)}/- <b className='ml-2 text-gray-400 line-through'>₹{Math.floor(Data.price * 1.7)}</b></p>
             <button className="flex ml-8 text-white bg-pink-800 border-0 py-2 px-6 focus:outline-none hover:bg-pink-500 rounded">Buy Now</button>
             <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-5">
               <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
@@ -88,7 +73,7 @@ const slug = () => {
             </span>
           </div>
           
-          <p className="leading-relaxed mt-2">{Data.description}</p>
+          <p className="leading-relaxed mt-2" dangerouslySetInnerHTML={{ __html: Data.description }}></p>
 
           
         </div>
