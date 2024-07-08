@@ -1,3 +1,4 @@
+import Categorybar from "@/components/Categorybar";
 import ProductDesign from "@/components/ProductDesign";
 import React, { useEffect, useState } from "react";
 
@@ -14,6 +15,7 @@ const tshirts = () => {
 
   return (
     <div>
+      <Categorybar></Categorybar>
       <section className="text-gray-600 body-font ">
         <div className="container mx-auto ">
           <div className="flex flex-wrap  max-md:gap-x m-4">

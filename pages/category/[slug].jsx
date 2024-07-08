@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 import ProductDesign from "@/components/ProductDesign";
+import Categorybar from '@/components/Categorybar';
 
 
 
@@ -20,6 +21,7 @@ const slug = () => {
   
     return (
       <div>
+        <Categorybar></Categorybar>
         <section className="text-gray-600 body-font ">
           <div className="container mx-auto ">
             <div className="flex flex-wrap  max-md:gap-x m-4">

@@ -1,7 +1,10 @@
+import Categorybar from "@/components/Categorybar";
 import Footer from "@/components/Footer";
+import Loadingbar from "@/components/Loadingbar";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import "@/styles/globals.css";
+import { Suspense } from "react";
 
 
 export default function App({ Component, pageProps }) {
@@ -15,7 +18,11 @@ export default function App({ Component, pageProps }) {
       <Sidebar ></Sidebar>
       
       <div className=" w-full overflow-y-scroll" >
-      <Component {...pageProps} />
+
+      
+        
+        <Component {...pageProps}></Component>
+
       
       <Footer></Footer>
       </div>
