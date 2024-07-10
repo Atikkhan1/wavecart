@@ -5,7 +5,7 @@ export async function POST(req) {
   let key = param.key
   let value = param.value
 
-    await mongoose.connect("mongodb+srv://khanarbajpathan057:atikkhan59986@wavecart.lrjxhkh.mongodb.net/wavecart")
+    await mongoose.connect(process.env.MONGO_URI)
       let products = await Product.find({[key]:value})
       return new Response(JSON.stringify(products));
     
